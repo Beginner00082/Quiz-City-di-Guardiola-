@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz del City</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- SCREEN 1: PASSWORD -->
+    <div class="screen active" id="screen-password">
+        <div class="card">
+            <h1>Accesso Riservato</h1>
+            <p id="pass-label">Inserisci la password</p>
+            <input type="password" id="pass-input" placeholder="••••" maxlength="10">
+            <button class="btn-primary" id="pass-submit">Entra</button>
+            <div class="error" id="pass-error"></div>
+
+            <div class="retry" id="retry-box">
+                <p>Password sbagliata. Provare con un altro metodo?</p>
+                <div class="retry-btns">
+                    <button class="btn-secondary" id="retry-no">No</button>
+                    <button class="btn-secondary" id="retry-yes">Sì</button>
+                </div>
+            </div>
+
+            <div class="quiz" id="quiz-pako">
+                <p>Chi è Antonio Conte?</p>
+                <button class="quiz-btn" data-q="pako" data-a="A">A) L'allenatore attuale del Napoli</button>
+                <button class="quiz-btn" data-q="pako" data-a="B">B) Anna Di Meo</button>
+                <button class="quiz-btn" data-q="pako" data-a="C">C) Peppe Zara</button>
+                <div class="error" id="quiz-pako-error"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCREEN 2: INTRO -->
+    <div class="screen" id="screen-intro">
+        <div class="card">
+            <h1>Quiz del City</h1>
+            <p class="intro-text">Quante stronzate sai sul city di Guardiola?<br>Sicuramente più del 60%, dato che una cosa buona in questo gruppo non viene detta.</p>
+            <button class="btn-primary" id="start-quiz">Continua</button>
+        </div>
+    </div>
+
+    <!-- SCREEN 3: QUIZ PRINCIPALE -->
+    <div class="screen" id="screen-quiz">
+        <div class="card">
+            <div class="progress">
+                <div class="progress-bar" id="progress-bar"></div>
+                <span id="progress-text">Domanda 1/11</span>
+            </div>
+            <h2 id="question-text"></h2>
+            <div class="answers" id="answers"></div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+    </div>
+
+    <!-- SCREEN 4: RISULTATO -->
+    <div class="screen" id="screen-result">
+        <div class="card">
+            <h1>Risultato</h1>
+            <div class="score" id="score">0%</div>
+            <p class="result-text" id="result-text"></p>
+            <button class="btn-primary" id="restart">Ricomincia</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+          </html>
