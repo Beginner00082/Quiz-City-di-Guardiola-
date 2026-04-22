@@ -89,7 +89,7 @@ const questions = [
     {
         q: 'Christian non muove mai i banchi di scuola:',
         a: ['A) Vero', 'B) Falso'],
-        correct: 0
+        correct: 1
     },
     {
         q: 'Di chi erano le feci nel giardino della vicina?',
