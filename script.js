@@ -104,7 +104,7 @@ const questions = [
     {
         q: 'Quanto è alto Mario?',
         a: ['A) 1.80m', 'B) 1.13m', 'C) 1.70m'],
-        correct: 2
+        correct: 1
     },
     {
         q: 'Dopo aver esagerato con la sedia, cosa bisogna fare?',
