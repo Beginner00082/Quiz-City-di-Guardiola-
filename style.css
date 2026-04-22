@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1e0f1f 100%);
+    padding: 20px;
+    color: #fff;
+}
+
+.screen {
+    display: none;
+    width: 100%;
+    max-width: 480px;
+    animation: fadeIn 0.4s ease;
+}
+
+.screen.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 40px 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.3rem;
+    margin-bottom: 24px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+p {
+    color: #b8b8b8;
+    margin-bottom: 24px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.intro-text {
+    font-size: 1.05rem;
+}
+
+#pass-input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 1.2rem;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+#pass-input:focus {
+    border-color: #a01e3a;
+    box-shadow: 0 0 0 3px rgba(160, 30, 58, 0.15);
+}
+
+.btn-primary {
+    width: 100%;
+    border: none;
+    background: linear-gradient(135deg, #a01e3a 0%, #c92a47 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(160, 30, 58, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    flex: 1;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    background: transparent;
+    color: #fff;
+    border-radius: 14px;
+    padding: 14px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    border-color: #a01e3a;
+    background: rgba(160, 30, 58, 0.1);
+}
+
+.error {
+    color: #ff5a7a;
+    font-size: 0.9rem;
+    margin-top: 12px;
+    min-height: 22px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.retry,.quiz {
+    display: none;
+    margin-top: 20px;
+}
+
+.retry.active,.quiz.active {
+    display: block;
+}
+
+.retry-btns {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+.quiz-btn {
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    color: #fff;
+    border-radius: 14px;
+    padding: 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.quiz-btn:hover {
+    border-color: #a01e3a;
+    background: rgba(160, 30, 58, 0.15);
+    transform: translateX(4px);
+}
+
+.progress {
+    margin-bottom: 24px;
+    position: relative;
+}
+
+.progress-bar {
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: var(--w, 0%);
+    background: linear-gradient(90deg, #a01e3a, #c92a47);
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.answers {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback {
+    margin-top: 16px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    min-height: 30px;
+    color: #c92a47;
+}
+
+.score {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 5rem;
+    text-align: center;
+    margin: 20px 0;
+    background: linear-gradient(135deg, #a01e3a, #ff5a7a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.result-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+  }
